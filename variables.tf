@@ -81,11 +81,12 @@ variable "create_sns_lambda" {
 
 variable "lambda_function_name" {
   type        = list(string)
-  default     = [""]
+  default     = []
   description = "ARN of lambda function"
 }
+
 variable tags {
   type        = any
-  default     = {}
-  description = "If you want, add tags of resources"
+  default     = null
+  description = "tags"
 }

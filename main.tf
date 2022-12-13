@@ -33,7 +33,7 @@ resource "aws_lambda_permission" "with_sns" {
 
   statement_id  = "AllowExecutionFromSNS"
   action        = "lambda:InvokeFunction"
-  function_name = var.lambda_function_name # aws_lambda_function.func.function_name
+  function_name = var.lambda_function_name[count.index] # aws_lambda_function.func.function_name
   principal     = "sns.amazonaws.com"
   source_arn    = element(concat(module.sns.*.sns_topic_arn, [""]), 0)
 }
