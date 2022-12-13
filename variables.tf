@@ -84,5 +84,8 @@ variable "lambda_function_name" {
   default     = [""]
   description = "ARN of lambda function"
 }
-
-
+variable tags {
+  type        = any
+  default     = {}
+  description = "If you want, add tags of resources"
+}
