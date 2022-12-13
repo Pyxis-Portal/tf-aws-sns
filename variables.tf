@@ -85,7 +85,7 @@ variable "lambda_function_name" {
   description = "ARN of lambda function"
 }
 
-variable tags {
+variable "tags" {
   type        = any
   default     = null
   description = "tags"
