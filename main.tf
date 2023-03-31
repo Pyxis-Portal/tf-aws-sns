@@ -21,6 +21,8 @@ module "sns" {
   redrive_policy                    = var.sns_redrive_policy
   redrive_policy_max_receiver_count = var.sns_redrive_policy_max_receiver_count
   sns_topic_policy_json             = var.sns_sns_topic_policy_json
+  encryption_enabled                = var.sns_encryption_enabled
+  kms_master_key_id                 = var.sns_kms_master_key_id
 
   tags = merge(
     local.tags,
